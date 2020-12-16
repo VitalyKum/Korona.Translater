@@ -1,0 +1,27 @@
+﻿<Window x:Class="Korona.Translater.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Korona.Translater.Wpf"
+        mc:Ignorable="d"
+        Title="Корона-Мех. Подготовка почтового файла" Height="343" Width="631" WindowStyle="ThreeDBorderWindow">
+    <Grid HorizontalAlignment="Right" Width="631">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="454*"/>
+            <ColumnDefinition Width="61*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Исходный csv-файл" HorizontalAlignment="Left" Margin="22,20,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox Name="TextBoxsourceFile" Margin="29,24,51,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="435" Grid.Column="1" Grid.ColumnSpan="2" Height="22"/>
+        <Button Name="ButtonChooseFile" Content="..." HorizontalAlignment="Center" Margin="0,23,0,0" VerticalAlignment="Top" Width="30" Grid.Column="2" Click="ButtonChooseFile_Click" Height="23"/>
+        <TextBox Name="TextBoxLog" Margin="19,116,19,51" TextWrapping="Wrap" Width="593" Grid.ColumnSpan="3"/>
+        <Label Content="Схема обработки" HorizontalAlignment="Left" Margin="22,55,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <ComboBox Name="ComboBoxRules" Grid.Column="1" HorizontalAlignment="Right" Margin="0,57,51,0" VerticalAlignment="Top" Width="435" Grid.ColumnSpan="2"/>
+        <Label Content="Ход обработки" HorizontalAlignment="Left" Margin="22,90,0,0" VerticalAlignment="Top"/>
+        <Button Name="buttonOk" Content="Ok" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,20,10" VerticalAlignment="Bottom" Width="73" Height="24" Click="buttonOk_Click" Grid.ColumnSpan="2"/>
+        <Button Name="buttonCancel" Content="Отмена" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,49,10" VerticalAlignment="Bottom" Width="73" Height="24" IsCancel="True" Click="buttonCancel_Click"/>
+        <Button x:Name="ButtonEditHandleSchema" Content="..." HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" Width="30" Grid.Column="2" Height="23" Click="ButtonEditHandleSchema_Click"/>
+
+    </Grid>
+</Window>
